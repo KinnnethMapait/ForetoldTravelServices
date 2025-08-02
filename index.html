@@ -29,7 +29,7 @@
       max-width: 1100px;
       margin-left: 0;
       margin-right: auto;
-      gap: 60px;
+      gap: 38px;
       flex-wrap: wrap;
     }
     .header-left {
@@ -72,23 +72,21 @@
       text-align: left;
     }
     .about-right {
-      max-width: 400px;
+      max-width: 420px;
       margin-left: 20px;
       background: rgba(255,255,255,0.85);
       border-radius: 16px;
       padding: 22px 28px 18px 28px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-    }
-    .about-right h2 {
-      color: #FF7043;
-      margin-top: 0;
-      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      min-height: 110px;
     }
     .about-right p {
-      margin: 0 0 8px 0;
+      margin: 0;
       font-size: 1.08em;
+      color: #444;
     }
-
     nav {
       background: #FF7043;
       text-align: center;
@@ -110,8 +108,7 @@
       color: #FFE0B2;
       text-decoration: underline;
     }
-
-    /* HERO COVERS */
+    /* Rest of CSS remains the same as before */
     .hero-cover, .services-cover {
       min-height: 100vh;
       width: 100vw;
@@ -179,37 +176,6 @@
       font-size: 1em;
       color: #333;
       margin-bottom: 0;
-    }
-    /* Two column layout for sections */
-    .main-content {
-      display: flex;
-      flex-direction: row;
-      gap: 32px;
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 40px 20px 0 20px;
-    }
-    .left-col, .right-col {
-      flex: 1 1 0;
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .section {
-      background-color: rgba(255, 255, 255, 0.95);
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
-      padding: 38px 20px;
-      margin-bottom: 0;
-    }
-    .section:hover {
-      transform: translateY(-3px);
-    }
-    .section h2 {
-      color: #FF7043;
-      margin-bottom: 20px;
     }
     .faq-testimonials-section {
       background-color: rgba(255, 255, 255, 0.98);
@@ -345,22 +311,11 @@
         padding: 36px 8vw;
       }
       .header-main-row {
-        gap: 26px;
-        padding: 34px 18px 18px 18px;
+        gap: 20px;
+        padding: 28px 12px 18px 12px;
       }
       .faq-testimonials-flex {
         gap: 18px;
-      }
-    }
-    @media (max-width: 1000px) {
-      .main-content {
-        flex-direction: column;
-        padding: 20px 0 0 0;
-        gap: 0;
-      }
-      .left-col, .right-col {
-        width: 100%;
-        gap: 40px;
       }
     }
     @media (max-width: 900px) {
@@ -392,7 +347,7 @@
       .header-main-row {
         flex-direction: column;
         align-items: flex-start;
-        padding: 18px 4vw 12px 4vw;
+        padding: 14px 2vw 12px 2vw;
         border-bottom-right-radius: 16px;
         gap: 10px;
       }
@@ -455,10 +410,7 @@
         </div>
       </div>
       <div class="about-right">
-        <h2>About Us</h2>
-        <p>Foretold Travel Services is a trusted and accredited travel agency based in the Philippines, dedicated to turning your dream journeys into reality. Our team is composed of passionate travel experts ready to guide you every step of the way—from planning and booking to the moment you return home.</p>
-        <p>We are committed to providing personalized, hassle-free, and affordable travel solutions for individuals, families, and groups. Whether it’s an adventure to a new destination, a serene escape, or a business trip, we have the expertise and network to make your travel safe, memorable, and enjoyable.</p>
-        <p>Let us handle your travel needs, so you can focus on making memories!</p>
+        <p>Foretold Travel Services is an accredited Philippine-based agency offering personalized travel solutions for individuals and groups, including flights, tours, hotel bookings, and visa assistance—making your journeys smooth, secure, and memorable.</p>
       </div>
     </div>
   </header>
@@ -484,8 +436,8 @@
       <div class="services-details-block">
         <h3>🌴 Domestic Travel (Philippines)</h3>
         <ul>
-          <li>✈️ Flights to all major and regional airports, including Cebu, Palawan, Bohol, Davao, Siargao, Boracay, Iloilo, and more.</li>
-          <li>🏨 Resort & hotel bookings nationwide – from luxury to budget options, we partner with trusted establishments for your comfort.</li>
+          <li>✈️ Flights to all major and regional airports including Cebu, Palawan, Bohol, Davao, Siargao, Boracay, Iloilo, and more.</li>
+          <li>🏨 Resort & hotel bookings nationwide—from luxury to budget, with trusted partners for your comfort.</li>
           <li>🛶 Island hopping, guided excursions, and adventure tours (diving, hiking, historical tours, and more).</li>
           <li>🚐 Transport & ferry coordination, including private van rentals and inter-island ferry tickets.</li>
           <li>🎫 Special event and festival packages, group and corporate tours.</li>
