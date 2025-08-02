@@ -100,49 +100,41 @@
 
   <section class="section" id="contact">
     <h2>Contact Us</h2>
-    <form
+    <!-- Mailto Version -->
+<form
   action="https://formspree.io/f/xldlwdpv"
   method="POST"
 >
-  <label>
+    <label>
     Your name:
     <input type="text" name="name" required>
-  </label>
-  <label>
+    </label>
+    <label>
     Your email:
     <input type="email" name="email" required>
-  </label>
-  <label>
+    </label>
     Your message:
     <textarea name="message" required></textarea>
-  </label>
+    </label>
   <!-- your other form fields go here -->
   <button type="submit">Send</button>
 </form>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        const form = document.getElementById("contact-form");
-        form.addEventListener("submit", function(event) {
-          event.preventDefault();
-          fetch(form.action, {
-            method: form.method,
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
-          }).then(response => {
-            if (response.ok) {
-              form.innerHTML = "<p>Thank you! Your message has been sent.</p>";
-            } else {
-              form.innerHTML = "<p>Oops! There was a problem. Please try again.</p>";
-            }
-          }).catch(() => {
-            form.innerHTML = "<p>Oops! There was a problem. Please try again.</p>";
-          });
-        });
-      });
+      function sendMailto(event) {
+        event.preventDefault();
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const subject = encodeURIComponent('Booking Inquiry');
+        const body = encodeURIComponent(
+          `Email: ${email}\nMessage: ${message}`
+        );
+        window.location.href = `mailto:foretoldtravelservices@gmail.com?subject=${subject}&body=${body}`;
+      }
     </script>
 
     <div class="contact-info">
       <h3>You can also visit us on our socials</h3>
+      <p><strong>Email:</strong> <a href="mailto:foretoldtravelservices@gmail.com">foretoldtravelservices@gmail.com</a></p>
       <p><strong>Facebook:</strong> Foretold Travel Services</p>
       <p><strong>TikTok:</strong> @foretoldtravelservices</p>
       <p><strong>Instagram:</strong> @ForetoldTravelServices</p>
