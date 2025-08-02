@@ -20,13 +20,13 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: flex-start; /* Align to the left */
+      justify-content: flex-start;
       padding: 40px 20px 20px 40px;
       gap: 18px;
       background-color: rgba(255, 255, 255, 0.95);
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       max-width: 700px;
-      margin: 0 auto 0 0; /* Stick left, center vertically */
+      margin: 0 auto 0 0;
       border-bottom-right-radius: 40px;
       flex-wrap: wrap;
     }
@@ -38,7 +38,7 @@
       margin-bottom: 0;
       box-shadow: 0 2px 10px rgba(0,0,0,0.06);
       flex-shrink: 0;
-      border: 3px solid #000; /* Black border */
+      border: 3px solid #000;
       background: #fff;
     }
     .header-text-group {
@@ -48,8 +48,8 @@
       justify-content: center;
     }
     .site-title {
-      font-size: 3rem;
-      font-weight: 800;
+      font-size: 2rem;
+      font-weight: 700;
       color: #333;
       margin: 0;
       line-height: 1.1;
@@ -84,14 +84,68 @@
       color: #FFE0B2;
       text-decoration: underline;
     }
+
+    /* Hero Cover */
+    .hero-cover {
+      min-height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255,255,255,0.82);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-cover h2 {
+      color: #FF7043;
+      font-size: 3em;
+      margin-bottom: 24px;
+    }
+    .hero-cover p {
+      font-size: 1.5em;
+      margin-bottom: 32px;
+      color: #444;
+    }
+    .hero-cover button {
+      background-color: #FF7043;
+      color: white;
+      border: none;
+      padding: 18px 32px;
+      border-radius: 8px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .hero-cover button:hover {
+      background-color: #FB8C00;
+    }
+
+    /* Two column layout for sections */
+    .main-content {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 40px 20px 0 20px;
+    }
+    .left-col, .right-col {
+      flex: 1 1 0;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
     .section {
-      padding: 50px 25px;
-      max-width: 960px;
-      margin: 40px auto;
       background-color: rgba(255, 255, 255, 0.95);
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease;
+      padding: 38px 20px;
+      margin-bottom: 0;
     }
     .section:hover {
       transform: translateY(-3px);
@@ -118,7 +172,7 @@
       font-size: 16px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     }
-    button {
+    button:not(.hero-cover button) {
       background-color: #FF7043;
       color: white;
       border: none;
@@ -128,7 +182,7 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
-    button:hover {
+    button:not(.hero-cover button):hover {
       background-color: #FB8C00;
     }
     blockquote {
@@ -155,6 +209,17 @@
     footer p {
       margin: 8px 0;
     }
+    @media (max-width: 1000px) {
+      .main-content {
+        flex-direction: column;
+        padding: 20px 0 0 0;
+        gap: 0;
+      }
+      .left-col, .right-col {
+        width: 100%;
+        gap: 40px;
+      }
+    }
     @media (max-width: 700px) {
       .header-container {
         flex-direction: column;
@@ -169,6 +234,12 @@
       .site-title, .subtitle {
         text-align: left;
       }
+      .hero-cover h2 {
+        font-size: 2em;
+      }
+      .hero-cover p {
+        font-size: 1.15em;
+      }
     }
     @media (max-width: 480px) {
       .header-container {
@@ -177,6 +248,13 @@
       }
       .logo {
         max-width: 50px;
+      }
+      .hero-cover h2 {
+        font-size: 1.5em;
+      }
+      .hero-cover button {
+        font-size: 1em;
+        padding: 12px 20px;
       }
     }
   </style>
@@ -201,84 +279,92 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section class="section" style="text-align: center;">
+  <!-- HERO FULLPAGE COVER -->
+  <section class="hero-cover" id="hero">
     <h2>Explore the World with Us</h2>
     <p>Your next unforgettable adventure starts here with Foretold Travel Services.</p>
     <a href="#services"><button>View Our Services</button></a>
   </section>
 
-  <section class="section" id="services">
-    <h2>Our Services</h2>
-    <h3>🌴 Domestic Travel (Philippines)</h3>
-    <ul>
-      <li>✈️ Flights to Cebu, Palawan, Bohol, Davao, Siargao, etc.</li>
-      <li>🏨 Resort & hotel bookings nationwide</li>
-      <li>🛶 Island hopping & guided excursions</li>
-      <li>🚐 Transport & ferry coordination</li>
-    </ul>
-    <h3>🌍 International Travel</h3>
-    <ul>
-      <li>🌐 International flights & accommodations</li>
-      <li>🛂 Visa assistance & group travel planning</li>
-    </ul>
-    <h3>🧾 Other Services</h3>
-    <ul>
-      <li>🛫 Airport transfers & insurance</li>
-      <li>💬 Travel consultation</li>
-    </ul>
-  </section>
+  <!-- MAIN 2 COLUMN CONTENT -->
+  <div class="main-content">
+    <div class="left-col">
+      <section class="section" id="services">
+        <h2>Our Services</h2>
+        <h3>🌴 Domestic Travel (Philippines)</h3>
+        <ul>
+          <li>✈️ Flights to Cebu, Palawan, Bohol, Davao, Siargao, etc.</li>
+          <li>🏨 Resort & hotel bookings nationwide</li>
+          <li>🛶 Island hopping & guided excursions</li>
+          <li>🚐 Transport & ferry coordination</li>
+        </ul>
+        <h3>🌍 International Travel</h3>
+        <ul>
+          <li>🌐 International flights & accommodations</li>
+          <li>🛂 Visa assistance & group travel planning</li>
+        </ul>
+        <h3>🧾 Other Services</h3>
+        <ul>
+          <li>🛫 Airport transfers & insurance</li>
+          <li>💬 Travel consultation</li>
+        </ul>
+      </section>
 
-  <section class="section" id="gallery">
-    <h2>Gallery</h2>
-    <div style="display: flex; gap: 15px; overflow-x: auto;">
-      <img src="gallery1.jpg" alt="Travel 1" style="height: 200px; border-radius: 8px;">
-      <img src="gallery2.jpg" alt="Travel 2" style="height: 200px; border-radius: 8px;">
-      <img src="gallery3.jpg" alt="Travel 3" style="height: 200px; border-radius: 8px;">
+      <section class="section" id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <blockquote>"The best travel agency I've ever worked with! Hassle-free and very accommodating!" – Maria G.</blockquote>
+        <blockquote>"Super smooth booking process and amazing destinations!" – Jerome S.</blockquote>
+        <blockquote>"Our family trip was unforgettable, all thanks to Foretold!" – Dianne T.</blockquote>
+      </section>
+
+      <section class="section" id="about">
+        <h2>About Us</h2>
+        <p>We are a trusted travel agency based in the Philippines, helping clients explore the world with convenience and joy. Our mission is to create travel that matters.</p>
+      </section>
     </div>
-  </section>
 
-  <section class="section" id="testimonials">
-    <h2>What Our Clients Say</h2>
-    <blockquote>"The best travel agency I've ever worked with! Hassle-free and very accommodating!" – Maria G.</blockquote>
-    <blockquote>"Super smooth booking process and amazing destinations!" – Jerome S.</blockquote>
-    <blockquote>"Our family trip was unforgettable, all thanks to Foretold!" – Dianne T.</blockquote>
-  </section>
+    <div class="right-col">
+      <section class="section" id="gallery">
+        <h2>Gallery</h2>
+        <div style="display: flex; gap: 15px; overflow-x: auto;">
+          <img src="gallery1.jpg" alt="Travel 1" style="height: 200px; border-radius: 8px;">
+          <img src="gallery2.jpg" alt="Travel 2" style="height: 200px; border-radius: 8px;">
+          <img src="gallery3.jpg" alt="Travel 3" style="height: 200px; border-radius: 8px;">
+        </div>
+      </section>
 
-  <section class="section" id="faq">
-    <h2>Frequently Asked Questions</h2>
-    <h4>Do you assist with visa processing?</h4>
-    <p>Yes, for selected countries.</p>
-    <h4>Can I customize my travel package?</h4>
-    <p>Absolutely!</p>
-  </section>
+      <section class="section" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <h4>Do you assist with visa processing?</h4>
+        <p>Yes, for selected countries.</p>
+        <h4>Can I customize my travel package?</h4>
+        <p>Absolutely!</p>
+      </section>
 
-  <section class="section" id="about">
-    <h2>About Us</h2>
-    <p>We are a trusted travel agency based in the Philippines, helping clients explore the world with convenience and joy. Our mission is to create travel that matters.</p>
-  </section>
+      <section class="section" id="contact">
+        <h2>Inquire Now!</h2>
+        <form action="https://formspree.io/f/xldlwdpv" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
 
-  <section class="section" id="contact">
-    <h2>Inquire Now!</h2>
-    <form action="https://formspree.io/f/xldlwdpv" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <section class="section" id="stay-connected">
-    <h2>Stay Connected</h2>
-    <p>Subscribe for updates and follow us on social media.</p>
-    <form action="https://formspree.io/f/xldlwdpv" method="POST">
-      <input type="email" name="email" placeholder="Enter your email" required>
-      <button type="submit">Subscribe</button>
-    </form>
-    <p>📘 <a href="https://facebook.com/ForetoldTravelServices" target="_blank">Facebook</a> |
-       📸 <a href="https://instagram.com/ForetoldTravelServices" target="_blank">Instagram</a> |
-       🎵 <a href="https://tiktok.com/@foretoldtravelservices" target="_blank">TikTok</a></p>
-    <p>📞 0928-711-3308 / 0927-137-7045</p>
-  </section>
+      <section class="section" id="stay-connected">
+        <h2>Stay Connected</h2>
+        <p>Subscribe for updates and follow us on social media.</p>
+        <form action="https://formspree.io/f/xldlwdpv" method="POST">
+          <input type="email" name="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p>📘 <a href="https://facebook.com/ForetoldTravelServices" target="_blank">Facebook</a> |
+           📸 <a href="https://instagram.com/ForetoldTravelServices" target="_blank">Instagram</a> |
+           🎵 <a href="https://tiktok.com/@foretoldtravelservices" target="_blank">TikTok</a></p>
+        <p>📞 0928-711-3308 / 0927-137-7045</p>
+      </section>
+    </div>
+  </div>
 
   <footer>
     <p>&copy; 2025 Foretold Travel Services. All rights reserved.</p>
