@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Foretold Travel Services</title>
+  <header>
+  <div class="header-container">
+  <img src="FB_IMG_1742267445564.jpg" alt="Foretold Travel Logo" class="logo">
+  <h1 class="site-title">Foretold Travel Services</h1>
+  </div>
   <meta name="description" content="Foretold Travel Services - Your trusted travel agency for tours, bookings, and adventures.">
   <meta name="keywords" content="travel, tours, booking, Foretold Travel Services, adventure, vacation, tourism">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -17,17 +21,29 @@
       scroll-behavior: smooth;
     }
 
-    header {
+    header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 16px;
+      flex-wrap: wrap;
       background-color: rgba(255, 255, 255, 0.95);
-      padding: 60px 20px;
-      text-align: center;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
-    header a {
-      <div style="display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
-      <h1 style="margin: 0;">Foretold Travel Services</h1>
-      <img src="FB_IMG_1742267445564.jpg" alt="Foretold Travel Services Logo" style="height: 50px;">
-      </div>
+
+    logo {
+      height: 50px;
+      width: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    site-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #333;
+      margin: 0;
     }
     nav {
       background: #FF7043;
