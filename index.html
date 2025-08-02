@@ -11,7 +11,6 @@
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      /* Use the uploaded logo as the background image */
       background: url('FB_IMG_1742267445564.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #333;
@@ -28,6 +27,9 @@
       background: #FFA726;
       text-align: center;
       padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
     nav a {
       color: white;
@@ -41,6 +43,7 @@
       margin: auto;
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 12px;
+      margin-top: 20px;
     }
     .section h2 {
       color: #FFA726;
@@ -76,6 +79,9 @@
       text-align: center;
       padding: 20px;
     }
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 <body>
@@ -85,9 +91,21 @@
 
   <nav>
     <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#faq">FAQ</a>
+    <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- Hero Banner -->
+  <section class="section" style="text-align: center; background-color: rgba(255,255,255,0.8);">
+    <h2>Explore the World with Us</h2>
+    <p>Your next unforgettable adventure starts here with Foretold Travel Services.</p>
+    <a href="#services"><button>View Our Services</button></a>
+  </section>
+
+  <!-- Services -->
   <section class="section" id="services">
     <h2>Our Services</h2>
     <p>Foretold Travel Services offers tailored travel booking solutions, including:</p>
@@ -99,40 +117,59 @@
     </ul>
   </section>
 
+  <!-- Gallery -->
+  <section class="section" id="gallery">
+    <h2>Gallery</h2>
+    <div style="display: flex; gap: 15px; overflow-x: auto;">
+      <img src="gallery1.jpg" alt="Travel 1" style="height: 200px; border-radius: 8px;">
+      <img src="gallery2.jpg" alt="Travel 2" style="height: 200px; border-radius: 8px;">
+      <img src="gallery3.jpg" alt="Travel 3" style="height: 200px; border-radius: 8px;">
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <blockquote>"The best travel agency I've ever worked with! Hassle-free and very accommodating!" – Maria G.</blockquote>
+    <blockquote>"Super smooth booking process and amazing destinations!" – Jerome S.</blockquote>
+    <blockquote>"Our family trip was unforgettable, all thanks to Foretold!" – Dianne T.</blockquote>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <h4>Do you assist with visa processing?</h4>
+    <p>Yes, we offer complete visa assistance for selected countries.</p>
+    <h4>Can I customize my travel package?</h4>
+    <p>Absolutely! We tailor packages to suit your preferences and budget.</p>
+    <h4>How can I contact you quickly?</h4>
+    <p>Message us directly via Facebook or WhatsApp for real-time support.</p>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p>Foretold Travel Services is a locally trusted travel agency dedicated to making your dream trips a reality. With experienced agents and a passion for exploring, we guarantee unforgettable journeys and seamless bookings.</p>
+  </section>
+
+  <!-- Contact -->
   <section class="section" id="contact">
     <h2>Contact Us</h2>
-    <!-- Mailto Version -->
-<form
-  action="https://formspree.io/f/xldlwdpv"
-  method="POST"
->
-  <label>
-      Your name:
-      <input type="text" name="name" required>
+    <form action="https://formspree.io/f/xldlwdpv" method="POST">
+      <label>
+        Your name:
+        <input type="text" name="name" required>
       </label>
       <label>
-      Your email:
-      <input type="email" name="email" required>
+        Your email:
+        <input type="email" name="email" required>
       </label>
       <label>
-      Your message: 
-      <textarea name="message" required></textarea>
-  </label>
-  <!-- your other form fields go here -->
+        Your message: 
+        <textarea name="message" required></textarea>
+      </label>
       <button type="submit">Send</button>
     </form>
-    <script>
-      function sendMailto(event) {
-        event.preventDefault();
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        const subject = encodeURIComponent('Booking Inquiry');
-        const body = encodeURIComponent(
-          `Email: ${email}\nMessage: ${message}`
-        );
-        window.location.href = `mailto:foretoldtravelservices@gmail.com?subject=${subject}&body=${body}`;
-      }
-    </script>
 
     <div class="contact-info">
       <h3>You can also visit us on our socials</h3>
@@ -143,8 +180,38 @@
     </div>
   </section>
 
+  <!-- Newsletter -->
+  <section class="section" id="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Subscribe to our newsletter for travel deals and updates!</p>
+    <form action="https://formspree.io/f/xldlwdpv" method="POST">
+      <input type="email" name="newsletter-email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Google Map -->
+  <section class="section" id="map">
+    <h2>Visit Us</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!..." 
+      width="100%" 
+      height="300" 
+      style="border:0; border-radius: 12px;"
+      allowfullscreen="" 
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
   <footer>
     &copy; 2025 Foretold Travel Services. All rights reserved.
   </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/639287113308" target="_blank" 
+     style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; padding: 12px 18px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000;">
+    Chat with us 💬
+  </a>
 </body>
 </html>
