@@ -16,19 +16,27 @@
       color: #333;
       scroll-behavior: smooth;
     }
-    .header-container {
+    .header-main-row {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      margin: 0;
+      padding: 40px 40px 24px 40px;
+      border-bottom-right-radius: 40px;
+      max-width: 1100px;
+      margin-left: 0;
+      margin-right: auto;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+    .header-left {
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: flex-start;
-      padding: 40px 20px 20px 40px;
       gap: 18px;
-      background-color: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      max-width: 700px;
-      margin: 0 auto 0 0;
-      border-bottom-right-radius: 40px;
-      flex-wrap: wrap;
     }
     .logo {
       max-width: 70px;
@@ -63,6 +71,24 @@
       font-weight: 500;
       text-align: left;
     }
+    .about-right {
+      max-width: 400px;
+      margin-left: 20px;
+      background: rgba(255,255,255,0.85);
+      border-radius: 16px;
+      padding: 22px 28px 18px 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    .about-right h2 {
+      color: #FF7043;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+    .about-right p {
+      margin: 0 0 8px 0;
+      font-size: 1.08em;
+    }
+
     nav {
       background: #FF7043;
       text-align: center;
@@ -84,6 +110,7 @@
       color: #FFE0B2;
       text-decoration: underline;
     }
+
     /* HERO COVERS */
     .hero-cover, .services-cover {
       min-height: 100vh;
@@ -121,30 +148,37 @@
     .hero-cover button:hover, .services-cover button:hover {
       background-color: #FB8C00;
     }
-    .services-list {
+    .services-details {
+      margin: 0 auto 40px auto;
+      max-width: 1200px;
       display: flex;
       flex-wrap: wrap;
+      gap: 40px;
       justify-content: center;
-      gap: 50px;
-      margin-top: 40px;
-      margin-bottom: 40px;
     }
-    .services-block {
+    .services-details-block {
       background: rgba(255,255,255,0.98);
       border-radius: 16px;
       box-shadow: 0 2px 16px rgba(0,0,0,0.06);
       padding: 32px 36px;
       text-align: left;
       min-width: 260px;
-      max-width: 340px;
+      max-width: 390px;
+      flex: 1 1 310px;
     }
-    .services-block h3 {
+    .services-details-block h3 {
       color: #FF7043;
       margin-top: 0;
       font-size: 1.35em;
     }
-    .services-block ul {
+    .services-details-block ul {
       padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    .services-details-block p {
+      font-size: 1em;
+      color: #333;
+      margin-bottom: 0;
     }
     /* Two column layout for sections */
     .main-content {
@@ -177,12 +211,50 @@
       color: #FF7043;
       margin-bottom: 20px;
     }
-    h3 {
-      margin-top: 30px;
-      color: #444;
+    .faq-testimonials-section {
+      background-color: rgba(255, 255, 255, 0.98);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      padding: 38px 20px;
+      margin-bottom: 0;
+      margin-top: 40px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    ul {
-      padding-left: 20px;
+    .faq-testimonials-flex {
+      display: flex;
+      gap: 50px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .testimonials-block, .faq-block {
+      flex: 1 1 330px;
+      min-width: 260px;
+      max-width: 500px;
+    }
+    .testimonials-block blockquote {
+      background: #FFF3E0;
+      padding: 15px;
+      border-left: 5px solid #FFA726;
+      border-radius: 8px;
+      font-style: italic;
+      margin: 20px 0;
+    }
+    .faq-block h3, .testimonials-block h3 {
+      color: #FF7043;
+      margin-bottom: 12px;
+    }
+    .faq-q {
+      font-weight: bold;
+      margin-top: 18px;
+      margin-bottom: 5px;
+      color: #222;
+    }
+    .faq-a {
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 1em;
     }
     form {
       display: grid;
@@ -207,14 +279,6 @@
     }
     button:not(.hero-cover button):not(.services-cover button):hover {
       background-color: #FB8C00;
-    }
-    blockquote {
-      background: #FFF3E0;
-      padding: 15px;
-      border-left: 5px solid #FFA726;
-      border-radius: 8px;
-      font-style: italic;
-      margin: 20px 0;
     }
     .contact-info {
       margin-top: 30px;
@@ -280,6 +344,13 @@
         gap: 22px;
         padding: 36px 8vw;
       }
+      .header-main-row {
+        gap: 26px;
+        padding: 34px 18px 18px 18px;
+      }
+      .faq-testimonials-flex {
+        gap: 18px;
+      }
     }
     @media (max-width: 1000px) {
       .main-content {
@@ -304,14 +375,31 @@
       .inquire-form, .stay-connected {
         max-width: 100%;
       }
-    }
-    @media (max-width: 700px) {
-      .header-container {
+      .header-main-row {
         flex-direction: column;
         align-items: flex-start;
-        max-width: 98vw;
-        padding: 28px 10px 10px 10px;
-        border-bottom-right-radius: 24px;
+      }
+      .about-right {
+        margin-left: 0;
+        margin-top: 18px;
+      }
+      .faq-testimonials-flex {
+        flex-direction: column;
+        gap: 34px;
+      }
+    }
+    @media (max-width: 700px) {
+      .header-main-row {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 4vw 12px 4vw;
+        border-bottom-right-radius: 16px;
+        gap: 10px;
+      }
+      .header-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
       }
       .header-text-group {
         align-items: flex-start;
@@ -325,11 +413,14 @@
       .hero-cover p, .services-cover p {
         font-size: 1.15em;
       }
+      .about-right {
+        padding: 12px 12px 12px 12px;
+      }
     }
     @media (max-width: 480px) {
-      .header-container {
+      .header-main-row {
         border-bottom-right-radius: 10px;
-        padding: 15px 4vw 10px 4vw;
+        padding: 10px 2vw 10px 2vw;
       }
       .logo {
         max-width: 50px;
@@ -342,18 +433,32 @@
         padding: 12px 20px;
       }
       .inquire-stay-section {
-        padding: 18px 3vw;
+        padding: 10px 2vw;
+      }
+      .services-details-block {
+        padding: 18px 10px;
+      }
+      .faq-testimonials-section {
+        padding: 16px 4vw;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="header-container">
-      <img src="FB_IMG_1742267445564.jpg" alt="Foretold Travel Logo" class="logo">
-      <div class="header-text-group">
-        <h1 class="site-title">Foretold Travel Services</h1>
-        <div class="subtitle">Your trusted travel partner for tours and bookings</div>
+    <div class="header-main-row">
+      <div class="header-left">
+        <img src="FB_IMG_1742267445564.jpg" alt="Foretold Travel Logo" class="logo">
+        <div class="header-text-group">
+          <h1 class="site-title">Foretold Travel Services</h1>
+          <div class="subtitle">Your trusted travel partner for tours and bookings</div>
+        </div>
+      </div>
+      <div class="about-right">
+        <h2>About Us</h2>
+        <p>Foretold Travel Services is a trusted and accredited travel agency based in the Philippines, dedicated to turning your dream journeys into reality. Our team is composed of passionate travel experts ready to guide you every step of the way—from planning and booking to the moment you return home.</p>
+        <p>We are committed to providing personalized, hassle-free, and affordable travel solutions for individuals, families, and groups. Whether it’s an adventure to a new destination, a serene escape, or a business trip, we have the expertise and network to make your travel safe, memorable, and enjoyable.</p>
+        <p>Let us handle your travel needs, so you can focus on making memories!</p>
       </div>
     </div>
   </header>
@@ -361,10 +466,7 @@
   <nav>
     <a href="#hero">Home</a>
     <a href="#services-cover">Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#faq">FAQ</a>
-    <a href="#about">About</a>
+    <a href="#testimonials-faq">Testimonials & FAQ</a>
     <a href="#inquire-stay">Contact</a>
   </nav>
 
@@ -378,76 +480,73 @@
   <!-- SERVICES FULLPAGE COVER -->
   <section class="services-cover" id="services-cover">
     <h2>Our Services</h2>
-    <div class="services-list">
-      <div class="services-block">
+    <div class="services-details">
+      <div class="services-details-block">
         <h3>🌴 Domestic Travel (Philippines)</h3>
         <ul>
-          <li>✈️ Flights to Cebu, Palawan, Bohol, Davao, Siargao, etc.</li>
-          <li>🏨 Resort & hotel bookings nationwide</li>
-          <li>🛶 Island hopping & guided excursions</li>
-          <li>🚐 Transport & ferry coordination</li>
+          <li>✈️ Flights to all major and regional airports, including Cebu, Palawan, Bohol, Davao, Siargao, Boracay, Iloilo, and more.</li>
+          <li>🏨 Resort & hotel bookings nationwide – from luxury to budget options, we partner with trusted establishments for your comfort.</li>
+          <li>🛶 Island hopping, guided excursions, and adventure tours (diving, hiking, historical tours, and more).</li>
+          <li>🚐 Transport & ferry coordination, including private van rentals and inter-island ferry tickets.</li>
+          <li>🎫 Special event and festival packages, group and corporate tours.</li>
         </ul>
+        <p>Experience the beauty of the Philippines with packages tailored to your interests and budget. We take care of every detail so you can fully enjoy your trip.</p>
       </div>
-      <div class="services-block">
+      <div class="services-details-block">
         <h3>🌍 International Travel</h3>
         <ul>
-          <li>🌐 International flights & accommodations</li>
-          <li>🛂 Visa assistance & group travel planning</li>
+          <li>🌐 International flights & accommodations to top destinations: Asia, Europe, Middle East, North America, Australia, and more.</li>
+          <li>🛂 Visa assistance for tourist and business visas (Japan, Korea, Schengen, Australia, USA, etc.).</li>
+          <li>🧳 Group travel planning, incentive trips, and packaged tours (cruises, pilgrimages, educational trips).</li>
+          <li>🗺️ City tours, transfers, and itinerary creation for first-time travelers.</li>
         </ul>
+        <p>Enjoy seamless international adventures with guidance from our expert travel advisors. We assist in every stage—from documentation, booking, to on-trip support.</p>
       </div>
-      <div class="services-block">
+      <div class="services-details-block">
         <h3>🧾 Other Services</h3>
         <ul>
-          <li>🛫 Airport transfers & insurance</li>
-          <li>💬 Travel consultation</li>
+          <li>🛫 Airport transfers & comprehensive travel insurance for peace of mind.</li>
+          <li>💬 Personalized travel consultation for any trip, any purpose.</li>
+          <li>🎟️ Ticketing for events, amusement parks, and activities worldwide.</li>
+          <li>🤝 Assistance with special needs, senior citizen and PWD travel arrangements.</li>
         </ul>
+        <p>We go beyond the basics! Our team is ready to help with special requests, ensuring every journey is smooth and stress-free.</p>
       </div>
     </div>
     <a href="#inquire-stay"><button>Inquire Now</button></a>
   </section>
 
-  <!-- MAIN 2 COLUMN CONTENT -->
-  <div class="main-content">
-    <div class="left-col">
-      <section class="section" id="testimonials">
-        <h2>What Our Clients Say</h2>
+  <!-- TESTIMONIALS & FAQ in One Section -->
+  <section class="faq-testimonials-section" id="testimonials-faq">
+    <div class="faq-testimonials-flex">
+      <div class="testimonials-block">
+        <h3>What Our Clients Say</h3>
         <blockquote>"The best travel agency I've ever worked with! Hassle-free and very accommodating!" – Maria G.</blockquote>
-        <blockquote>"Super smooth booking process and amazing destinations!" – Jerome S.</blockquote>
-        <blockquote>"Our family trip was unforgettable, all thanks to Foretold!" – Dianne T.</blockquote>
-      </section>
-      <section class="section" id="about">
-        <h2>About Us</h2>
-        <p>We are a trusted travel agency based in the Philippines, helping clients explore the world with convenience and joy. Our mission is to create travel that matters.</p>
-      </section>
+        <blockquote>"Super smooth booking process and amazing destinations! Will book again!" – Jerome S.</blockquote>
+        <blockquote>"Our family trip was unforgettable, all thanks to Foretold! Excellent service from start to finish." – Dianne T.</blockquote>
+        <blockquote>"I got my visa approved thanks to their guidance. Highly recommended!" – Paolo L.</blockquote>
+      </div>
+      <div class="faq-block">
+        <h3>Frequently Asked Questions</h3>
+        <div class="faq-q">Do you assist with visa processing?</div>
+        <div class="faq-a">Yes, we provide visa assistance for select international destinations including Japan, Korea, Schengen, Australia, and the USA. Our team will guide you through the application process and help with document requirements. Contact us for country-specific details.</div>
+        <div class="faq-q">Can I customize my travel package?</div>
+        <div class="faq-a">Absolutely! We specialize in tailored itineraries to match your preferences, budget, and schedule—whether for leisure, business, family, or group travel.</div>
+        <div class="faq-q">How do I book a trip with you?</div>
+        <div class="faq-a">You can book a trip by filling out our inquiry form below, sending us a message on Facebook or Instagram, or calling us directly. Once we receive your details, we’ll send you options and a quote.</div>
+        <div class="faq-q">What payment methods do you accept?</div>
+        <div class="faq-a">We accept bank transfers, GCash, Maya, and major credit cards. Payment details will be provided upon booking confirmation.</div>
+        <div class="faq-q">Is my booking refundable?</div>
+        <div class="faq-a">Refund policies depend on the airline, hotel, or service provider. We will inform you of the terms before finalizing your booking. For more information, please contact us with your reservation details.</div>
+        <div class="faq-q">Are you accredited or licensed?</div>
+        <div class="faq-a">Yes, Foretold Travel Services is a duly registered and accredited travel agency in the Philippines. Your trust and security are our priorities.</div>
+        <div class="faq-q">Can you help with travel insurance?</div>
+        <div class="faq-a">Yes, we offer travel insurance options to give you peace of mind during your trip. Just let us know if you want to include insurance in your package.</div>
+        <div class="faq-q">How soon should I book my trip?</div>
+        <div class="faq-a">We recommend booking as early as possible—especially for peak seasons and international trips. Early bookings often get better rates and more availability.</div>
+      </div>
     </div>
-    <div class="right-col">
-      <section class="section" id="gallery">
-        <h2>Gallery</h2>
-        <div style="display: flex; gap: 15px; overflow-x: auto;">
-          <img src="gallery1.jpg" alt="Travel 1" style="height: 200px; border-radius: 8px;">
-          <img src="gallery2.jpg" alt="Travel 2" style="height: 200px; border-radius: 8px;">
-          <img src="gallery3.jpg" alt="Travel 3" style="height: 200px; border-radius: 8px;">
-        </div>
-      </section>
-      <section class="section" id="faq">
-        <h2>Frequently Asked Questions</h2>
-        <h4>Do you assist with visa processing?</h4>
-        <p>Yes, we provide visa assistance for select international destinations. Our team will guide you through the application process and help with document requirements. Contact us for country-specific details.</p>
-        <h4>Can I customize my travel package?</h4>
-        <p>Absolutely! We specialize in tailored itineraries to match your preferences, budget, and schedule. Whether you want a romantic getaway, a family adventure, or a business trip, let us know your requirements and we’ll plan the rest.</p>
-        <h4>How do I book a trip with you?</h4>
-        <p>You can book a trip by filling out our inquiry form, sending us a message on social media, or calling us directly. Once we receive your details, we’ll send you options and a quote.</p>
-        <h4>What payment methods do you accept?</h4>
-        <p>We accept bank transfers, GCash, Maya, and major credit cards. Payment details will be provided upon booking confirmation.</p>
-        <h4>Is my booking refundable?</h4>
-        <p>Refund policies depend on the airline, hotel, or service provider. We will inform you of the terms before finalizing your booking. For more information, please contact us with your reservation details.</p>
-        <h4>Are you accredited or licensed?</h4>
-        <p>Yes, Foretold Travel Services is a duly registered and accredited travel agency in the Philippines. We value your trust and confidence in booking with us.</p>
-        <h4>Can you help with travel insurance?</h4>
-        <p>Yes, we offer travel insurance options to give you peace of mind during your trip. Just let us know if you want to include insurance in your package.</p>
-      </section>
-    </div>
-  </div>
+  </section>
 
   <!-- INQUIRE NOW & STAY CONNECTED -->
   <section class="inquire-stay-section" id="inquire-stay">
@@ -483,7 +582,7 @@
     <p>&copy; 2025 Foretold Travel Services. All rights reserved.</p>
   </footer>
 
-  <a href="https://wa.me/639287113308" target="_blank" 
+  <a href="https://wa.me/639287113308" target="_blank"
      style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; padding: 12px 18px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000;">
     Chat with us 💬
   </a>
