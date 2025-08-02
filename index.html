@@ -102,7 +102,10 @@
   <section class="section" id="contact">
     <h2>Contact Us</h2>
     <!-- Mailto Version -->
-    <form id="mailto-form" onsubmit="sendMailto(event)">
+<form
+  action="https://formspree.io/f/xldlwdpv"
+  method="POST"
+>
   <label>
     Your name:
     <input type="text" name="name" required>
@@ -114,7 +117,8 @@
   <label>
     Your message:
     <textarea name="message" required></textarea>
-      </label>
+  </label>
+  <!-- your other form fields go here -->
       <button type="submit">Send</button>
     </form>
     <script>
