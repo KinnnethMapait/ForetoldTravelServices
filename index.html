@@ -103,13 +103,17 @@
     <h2>Contact Us</h2>
     <!-- Mailto Version -->
     <form id="mailto-form" onsubmit="sendMailto(event)">
-      <label>
-        Your email:
-        <input type="email" id="email" placeholder="Your Email" required>
-      </label>
-      <label>
-        Your message:
-        <textarea id="message" placeholder="Your Message" required></textarea>
+  <label>
+    Your name:
+    <input type="text" name="name" required>
+  </label>
+  <label>
+    Your email:
+    <input type="email" name="email" required>
+  </label>
+  <label>
+    Your message:
+    <textarea name="message" required></textarea>
       </label>
       <button type="submit">Send</button>
     </form>
