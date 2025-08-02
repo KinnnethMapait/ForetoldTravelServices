@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<h2>Hello, world!</h2>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -55,7 +54,7 @@
       border-radius: 4px;
       font-size: 16px;
     }
-    <button 
+    button {
       background-color: #FFA726;
       color: white;
       border: none;
@@ -96,17 +95,38 @@
       <li>Hotel Reservations</li>
       <li>Tour Packages and Itineraries</li>
       <li>Visa Assistance</li>
-          </ul>
+    </ul>
   </section>
 
   <section class="section" id="contact">
     <h2>Contact Us</h2>
-    <form>
+    <form id="contact-form" action="https://formspree.io/f/yourFormID" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button onclick="window.location.href='mailto:foretoldtravelservices@gmail.com?subject=Booking Inquiry&body=Hello, I am interested in your travel services.'">Send</button>
+      <button type="submit">Send</button>
     </form>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("contact-form");
+        form.addEventListener("submit", function(event) {
+          event.preventDefault();
+          fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          }).then(response => {
+            if (response.ok) {
+              form.innerHTML = "<p>Thank you! Your message has been sent.</p>";
+            } else {
+              form.innerHTML = "<p>Oops! There was a problem. Please try again.</p>";
+            }
+          }).catch(() => {
+            form.innerHTML = "<p>Oops! There was a problem. Please try again.</p>";
+          });
+        });
+      });
+    </script>
 
     <div class="contact-info">
       <h3>You can also visit us on our socials</h3>
@@ -119,6 +139,9 @@
 
   <footer>
     &copy; 2025 Foretold Travel Services. All rights reserved.
+  </footer>
+</body>
+</html>
   </footer>
 </body>
 </html>
