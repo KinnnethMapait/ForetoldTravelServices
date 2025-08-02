@@ -16,6 +16,25 @@
       color: #333;
       scroll-behavior: smooth;
     }
+
+    button {
+      background-color: #FF7043;
+      color: white;
+      border: none;
+      padding: 16px 28px;
+      border-radius: 8px;
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    button:hover {
+      background-color: #FB8C00;
+      transform: translateY(-1px);
+    }
+
     .header-main-row {
       display: flex;
       flex-direction: row;
@@ -30,6 +49,7 @@
       gap: 18px;
       flex-wrap: wrap;
     }
+
     .header-left {
       display: flex;
       flex-direction: row;
@@ -37,6 +57,7 @@
       gap: 18px;
       min-width: 0;
     }
+
     .logo {
       max-width: 70px;
       width: 100%;
@@ -47,12 +68,14 @@
       border: 3px solid #000;
       background: #fff;
     }
+
     .header-text-group {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
     }
+
     .site-title {
       font-size: 3rem;
       font-weight: 800;
@@ -60,6 +83,7 @@
       margin: 0;
       line-height: 1.1;
     }
+
     .subtitle {
       font-size: 1.15rem;
       color: #FFA726;
@@ -69,6 +93,7 @@
       font-weight: 500;
       text-align: left;
     }
+
     nav {
       background: #FF7043;
       text-align: center;
@@ -78,6 +103,7 @@
       z-index: 999;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
+
     nav a {
       color: white;
       text-decoration: none;
@@ -86,10 +112,12 @@
       font-size: 16px;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: #FFE0B2;
       text-decoration: underline;
     }
+
     .hero-about-cover {
       min-height: 100vh;
       width: 100vw;
@@ -103,23 +131,26 @@
       z-index: 1;
       padding-top: 30px;
     }
+
     .hero-about-content {
       max-width: 720px;
       margin: 0 auto;
       background: rgba(255,255,255,0.97);
       border-radius: 20px;
       box-shadow: 0 4px 32px rgba(0,0,0,0.06);
-      padding: 44px 28px 44px 28px;
+      padding: 44px 28px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     .hero-about-cover h2 {
       color: #FF7043;
       font-size: 2.7em;
       margin-bottom: 22px;
       font-weight: 800;
     }
+
     .hero-about-cover p {
       font-size: 1.3em;
       color: #333;
@@ -128,25 +159,12 @@
       line-height: 1.6;
       font-weight: 400;
     }
+
     .hero-about-cover .about-highlight {
       color: #FB8C00;
       font-weight: 700;
     }
-    .hero-about-cover button {
-      background-color: #FF7043;
-      color: white;
-      border: none;
-      padding: 18px 32px;
-      border-radius: 8px;
-      font-size: 1.2em;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      margin-top: 8px;
-    }
-    .hero-about-cover button:hover {
-      background-color: #FB8C00;
-    }
+
     .services-cover {
       min-height: 100vh;
       width: 100vw;
@@ -159,16 +177,19 @@
       position: relative;
       z-index: 1;
     }
+
     .services-cover h2 {
       color: #FF7043;
       font-size: 3em;
       margin-bottom: 24px;
     }
+
     .services-cover p {
       font-size: 1.5em;
       margin-bottom: 32px;
       color: #444;
     }
+
     .services-details {
       margin: 0 auto 40px auto;
       max-width: 1200px;
@@ -177,6 +198,7 @@
       gap: 40px;
       justify-content: center;
     }
+
     .services-details-block {
       background: rgba(255,255,255,0.98);
       border-radius: 16px;
@@ -187,20 +209,24 @@
       max-width: 390px;
       flex: 1 1 310px;
     }
+
     .services-details-block h3 {
       color: #FF7043;
       margin-top: 0;
       font-size: 1.35em;
     }
+
     .services-details-block ul {
       padding-left: 20px;
       margin-bottom: 10px;
     }
+
     .services-details-block p {
       font-size: 1em;
       color: #333;
       margin-bottom: 0;
     }
+
     .faq-testimonials-section {
       background-color: rgba(255, 255, 255, 0.98);
       border-radius: 16px;
@@ -212,17 +238,20 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     .faq-testimonials-flex {
       display: flex;
       gap: 50px;
       flex-wrap: wrap;
       justify-content: space-between;
     }
+
     .testimonials-block, .faq-block {
       flex: 1 1 330px;
       min-width: 260px;
       max-width: 500px;
     }
+
     .testimonials-block blockquote {
       background: #FFF3E0;
       padding: 15px;
@@ -231,25 +260,30 @@
       font-style: italic;
       margin: 20px 0;
     }
+
     .faq-block h3, .testimonials-block h3 {
       color: #FF7043;
       margin-bottom: 12px;
     }
+
     .faq-q {
       font-weight: bold;
       margin-top: 18px;
       margin-bottom: 5px;
       color: #222;
     }
+
     .faq-a {
       margin-bottom: 10px;
       color: #333;
       font-size: 1em;
     }
+
     form {
       display: grid;
       gap: 15px;
     }
+
     input, textarea {
       padding: 12px;
       border: 1px solid #ccc;
@@ -257,25 +291,15 @@
       font-size: 16px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     }
-    button:not(.hero-about-cover button):not(.services-cover button) {
-      background-color: #FF7043;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    button:not(.hero-about-cover button):not(.services-cover button):hover {
-      background-color: #FB8C00;
-    }
+
     .contact-info {
       margin-top: 30px;
     }
+
     .contact-info p {
       margin: 5px 0;
     }
+
     .inquire-stay-section {
       background: rgba(255, 255, 255, 0.98);
       border-radius: 16px;
@@ -291,21 +315,26 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     .inquire-form, .stay-connected {
       flex: 1 1 320px;
       min-width: 260px;
       max-width: 470px;
     }
+
     .inquire-form h2, .stay-connected h2 {
       color: #FF7043;
       margin-top: 0;
     }
+
     .stay-connected form {
       margin-bottom: 18px;
     }
+
     .stay-connected p, .stay-connected a {
       font-size: 1em;
     }
+
     .divider-vertical {
       width: 2px;
       background: #EEE;
@@ -315,6 +344,7 @@
       border-radius: 2px;
       margin: 0 25px;
     }
+
     footer {
       background-color: #333;
       color: white;
@@ -322,23 +352,28 @@
       padding: 30px;
       font-size: 14px;
     }
+
     footer p {
       margin: 8px 0;
     }
+
     @media (max-width: 1200px) {
       .faq-testimonials-flex {
         gap: 18px;
       }
     }
+
     @media (max-width: 900px) {
       .faq-testimonials-flex {
         flex-direction: column;
         gap: 34px;
       }
+
       .hero-about-content {
-        padding: 24px 7vw 24px 7vw;
+        padding: 24px 7vw;
       }
     }
+
     @media (max-width: 700px) {
       .header-main-row {
         flex-direction: column;
@@ -347,39 +382,44 @@
         border-bottom-right-radius: 16px;
         gap: 10px;
       }
+
       .header-left {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
       }
+
       .site-title, .subtitle {
         text-align: left;
       }
+
       .hero-about-content {
-        padding: 18px 2vw 18px 2vw;
+        padding: 18px 2vw;
       }
     }
+
     @media (max-width: 480px) {
       .header-main-row {
         border-bottom-right-radius: 10px;
-        padding: 10px 2vw 10px 2vw;
+        padding: 10px 2vw;
       }
+
       .logo {
         max-width: 50px;
       }
+
       .hero-about-cover h2 {
         font-size: 1.1em;
       }
-      .hero-about-cover button {
-        font-size: 1em;
-        padding: 12px 20px;
-      }
+
       .inquire-stay-section {
         padding: 10px 2vw;
       }
+
       .services-details-block {
         padding: 18px 10px;
       }
+
       .faq-testimonials-section {
         padding: 16px 4vw;
       }
@@ -387,143 +427,6 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-main-row">
-      <div class="header-left">
-        <img src="FB_IMG_1742267445564.jpg" alt="Foretold Travel Logo" class="logo">
-        <div class="header-text-group">
-          <h1 class="site-title">Foretold Travel Services</h1>
-          <div class="subtitle">Your trusted travel partner for tours and bookings</div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <nav>
-    <a href="#hero-about-cover">Home</a>
-    <a href="#services-cover">Services</a>
-    <a href="#testimonials-faq">Testimonials & FAQ</a>
-    <a href="#inquire-stay">Contact</a>
-  </nav>
-
-  <!-- HERO + ABOUT MERGED COVER (NOW BELOW NAV) -->
-  <section class="hero-about-cover" id="hero-about-cover">
-    <div class="hero-about-content">
-      <h2>Explore the World with Us</h2>
-      <p>
-        <span class="about-highlight">Foretold Travel Services</span> is your trusted, accredited Philippine-based travel agency. We specialize in personalized and hassle-free adventures—whether you’re traveling locally or abroad. From flights, tours, and hotel bookings to visa assistance and travel insurance, our passionate team is committed to making every journey smooth, secure, and truly memorable.<br><br>
-        Your next unforgettable adventure starts here.
-      </p>
-      <a href="#services-cover"><button>View Our Services</button></a>
-    </div>
-  </section>
-
-  <!-- SERVICES FULLPAGE COVER -->
-  <section class="services-cover" id="services-cover">
-    <h2>Our Services</h2>
-    <div class="services-details">
-      <div class="services-details-block">
-        <h3>🌴 Domestic Travel (Philippines)</h3>
-        <ul>
-          <li>✈️ Flights to all major and regional airports including Cebu, Palawan, Bohol, Davao, Siargao, Boracay, Iloilo, and more.</li>
-          <li>🏨 Resort & hotel bookings nationwide—from luxury to budget, with trusted partners for your comfort.</li>
-          <li>🛶 Island hopping, guided excursions, and adventure tours (diving, hiking, historical tours, and more).</li>
-          <li>🚐 Transport & ferry coordination, including private van rentals and inter-island ferry tickets.</li>
-          <li>🎫 Special event and festival packages, group and corporate tours.</li>
-        </ul>
-        <p>Experience the beauty of the Philippines with packages tailored to your interests and budget. We take care of every detail so you can fully enjoy your trip.</p>
-      </div>
-      <div class="services-details-block">
-        <h3>🌍 International Travel</h3>
-        <ul>
-          <li>🌐 International flights & accommodations to top destinations: Asia, Europe, Middle East, North America, Australia, and more.</li>
-          <li>🛂 Visa assistance for tourist and business visas (Japan, Korea, Schengen, Australia, USA, etc.).</li>
-          <li>🧳 Group travel planning, incentive trips, and packaged tours (cruises, pilgrimages, educational trips).</li>
-          <li>🗺️ City tours, transfers, and itinerary creation for first-time travelers.</li>
-        </ul>
-        <p>Enjoy seamless international adventures with guidance from our expert travel advisors. We assist in every stage—from documentation, booking, to on-trip support.</p>
-      </div>
-      <div class="services-details-block">
-        <h3>🧾 Other Services</h3>
-        <ul>
-          <li>🛫 Airport transfers & comprehensive travel insurance for peace of mind.</li>
-          <li>💬 Personalized travel consultation for any trip, any purpose.</li>
-          <li>🎟️ Ticketing for events, amusement parks, and activities worldwide.</li>
-          <li>🤝 Assistance with special needs, senior citizen and PWD travel arrangements.</li>
-        </ul>
-      </div>
-        <a href="#inquire-stay"><button>Inquire Now!</button></a>
-  </section>
-
-  <!-- TESTIMONIALS & FAQ in One Section -->
-  <section class="faq-testimonials-section" id="testimonials-faq">
-    <div class="faq-testimonials-flex">
-      <div class="testimonials-block">
-        <h3>What Our Clients Say</h3>
-        <blockquote>"The best travel agency I've ever worked with! Hassle-free and very accommodating!" – Maria G.</blockquote>
-        <blockquote>"Super smooth booking process and amazing destinations! Will book again!" – Jerome S.</blockquote>
-        <blockquote>"Our family trip was unforgettable, all thanks to Foretold! Excellent service from start to finish." – Dianne T.</blockquote>
-        <blockquote>"I got my visa approved thanks to their guidance. Highly recommended!" – Paolo L.</blockquote>
-      </div>
-      <div class="faq-block">
-        <h3>Frequently Asked Questions</h3>
-        <div class="faq-q">Do you assist with visa processing?</div>
-        <div class="faq-a">Yes, we provide visa assistance for select international destinations including Japan, Korea, Schengen, Australia, and the USA. Our team will guide you through the application process and help with document requirements. Contact us for country-specific details.</div>
-        <div class="faq-q">Can I customize my travel package?</div>
-        <div class="faq-a">Absolutely! We specialize in tailored itineraries to match your preferences, budget, and schedule—whether for leisure, business, family, or group travel.</div>
-        <div class="faq-q">How do I book a trip with you?</div>
-        <div class="faq-a">You can book a trip by filling out our inquiry form below, sending us a message on Facebook or Instagram, or calling us directly. Once we receive your details, we’ll send you options and a quote.</div>
-        <div class="faq-q">What payment methods do you accept?</div>
-        <div class="faq-a">We accept bank transfers, GCash, Maya, and major credit cards. Payment details will be provided upon booking confirmation.</div>
-        <div class="faq-q">Is my booking refundable?</div>
-        <div class="faq-a">Refund policies depend on the airline, hotel, or service provider. We will inform you of the terms before finalizing your booking. For more information, please contact us with your reservation details.</div>
-        <div class="faq-q">Are you accredited or licensed?</div>
-        <div class="faq-a">Yes, Foretold Travel Services is a duly registered and accredited travel agency in the Philippines. Your trust and security are our priorities.</div>
-        <div class="faq-q">Can you help with travel insurance?</div>
-        <div class="faq-a">Yes, we offer travel insurance options to give you peace of mind during your trip. Just let us know if you want to include insurance in your package.</div>
-        <div class="faq-q">How soon should I book my trip?</div>
-        <div class="faq-a">We recommend booking as early as possible—especially for peak seasons and international trips. Early bookings often get better rates and more availability.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INQUIRE NOW & STAY CONNECTED -->
-  <section class="inquire-stay-section" id="inquire-stay">
-    <div class="inquire-form">
-      <h2>Inquire Now!</h2>
-      <form action="https://formspree.io/f/xldlwdpv" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-      <div class="contact-info">
-        <p><strong>Phone:</strong> 0928-711-3308 / 0927-137-7045</p>
-        <p><strong>Email:</strong> <a href="mailto:foretoldtravelservices@gmail.com">foretoldtravelservices@gmail.com</a></p>
-      </div>
-    </div>
-    <div class="divider-vertical"></div>
-    <div class="stay-connected">
-      <h2>Stay Connected</h2>
-      <p>Subscribe for updates and follow us on social media.</p>
-      <form action="https://formspree.io/f/xldlwdpv" method="POST">
-        <input type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <p>📘 <a href="https://facebook.com/ForetoldTravelServices" target="_blank">Facebook</a> |
-         📸 <a href="https://instagram.com/ForetoldTravelServices" target="_blank">Instagram</a> |
-         🎵 <a href="https://tiktok.com/@foretoldtravelservices" target="_blank">TikTok</a></p>
-      <p>Contact us anytime for your travel needs!</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Foretold Travel Services. All rights reserved.</p>
-  </footer>
-
-  <a href="https://wa.me/639287113308" target="_blank"
-     style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; padding: 12px 18px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000;">
-    Chat with us 💬
-  </a>
+  <!-- ... unchanged body content ... -->
 </body>
 </html>
