@@ -104,9 +104,18 @@
   action="https://formspree.io/f/xldlwdpv"
   method="POST"
 >
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <label>
+    Your name:
+    <input type="text" name="name" required>
+  </label>
+  <label>
+    Your email:
+    <input type="email" name="email" required>
+  </label>
+  <label>
+    Your message:
+    <textarea name="message" required></textarea>
+  </label>
   <!-- your other form fields go here -->
   <button type="submit">Send</button>
 </form>
