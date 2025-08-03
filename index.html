@@ -16,6 +16,16 @@
       color: #333;
       scroll-behavior: smooth;
     }
+    /* === JUSTIFIED PARAGRAPHS === */
+    .hero-about-cover p,
+    .services-cover p,
+    .services-details-block p,
+    .faq-a,
+    .contact-info p,
+    .stay-connected p {
+      text-align: justify;
+    }
+    /* --- rest of your CSS unchanged --- */
     .header-main-row {
       display: flex;
       flex-direction: row;
@@ -387,6 +397,7 @@
   </style>
 </head>
 <body>
+<!-- ...rest of your HTML remains unchanged... -->
   <header>
     <div class="header-main-row">
       <div class="header-left">
@@ -452,8 +463,16 @@
           <li>🤝 Assistance with special needs, senior citizen and PWD travel arrangements.</li>
         </ul>
       </div>
-  </section>
-
+      <!-- Place the button here, right after "Other Services" block -->
+        <div style="margin-top: 40px; text-align: center; width:100%">
+          <a href="#inquire-stay">
+          <button style="background-color: #FB8C00; color: #fff; padding: 18px 32px; border-radius: 8px; border: none; font-size: 1.2em; cursor: pointer;">
+              Inquire Now
+            </button>
+            </a>
+          </div>
+        </div>
+    </section>
   <!-- TESTIMONIALS & FAQ in One Section -->
   <section class="faq-testimonials-section" id="testimonials-faq">
     <div class="faq-testimonials-flex">
